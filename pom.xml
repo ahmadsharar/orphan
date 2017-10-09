@@ -1,0 +1,139 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.baqa.club</groupId>
+	<artifactId>orphan</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>orphan Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<!-- Project Compile Encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- Java Compile Version -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<!-- Jars Versions -->
+		<junit.version>4.12</junit.version>
+		<hibernate.version>5.2.11.Final</hibernate.version>
+		<hibernate.c3p0.version>5.1.0.Final</hibernate.c3p0.version>
+		<hibernate.ehcache.version>5.2.11.Final</hibernate.ehcache.version>
+		<mysql.connecter.version>5.1.44</mysql.connecter.version>
+		<common.lang.version>2.6</common.lang.version>
+		<spring.version>5.0.0.RELEASE</spring.version>
+		<servlet.version>4.0.0</servlet.version>
+		<webjar.bootsrap.version>4.0.0-beta</webjar.bootsrap.version>
+		<webjar.font.awsome.version>4.7.0</webjar.font.awsome.version>
+		<webjar.jquery.version>3.2.1</webjar.jquery.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate.c3p0.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.ehcache.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connecter.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${common.lang.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>${webjar.jquery.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${webjar.bootsrap.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.webjars</groupId>
+					<artifactId>jquery</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.webjars/font-awesome -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>${webjar.font.awsome.version}</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<finalName>orphan</finalName>
+	</build>
+</project>

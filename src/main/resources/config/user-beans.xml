@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+					 http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+					 http://www.springframework.org/schema/context  
+					 http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<context:component-scan base-package="com.baqa.club.orphan" />
+	<context:annotation-config />
+
+	<bean id="kidDao" class="com.baqa.club.orphan.dao.impl.KidsDaoImpl" >
+	 	<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="service" class="com.baqa.club.orphan.service.impl.KidsServiceImple" />
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:config/hibernate.cfg.xml" />
+	</bean>
+
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>
